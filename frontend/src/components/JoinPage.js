@@ -229,12 +229,12 @@ const JoinPage = ({ onGoToHome }) => {
                   <div className="price">Gratis</div>
                   <p>7 hari trial</p>
                 </div>
-                <div className="pricing-card">
+                <div className="pricing-card featured">
                   <h4>Basic</h4>
                   <div className="price">Rp 5.000</div>
-                  <p>Fitur dasar</p>
+                  <p>Fitur dasar (POPULER)</p>
                 </div>
-                <div className="pricing-card featured">
+                <div className="pricing-card">
                   <h4>Premium</h4>
                   <div className="price">Rp 12.000</div>
                   <p>Fitur lengkap</p>
