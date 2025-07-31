@@ -69,7 +69,7 @@ const JoinPage = ({ onGoToHome }) => {
             <span className="header-text">VZ Botz Indonesia</span>
           </div>
           <ul className="nav-menu">
-            <li><a href="#home">Beranda</a></li>
+            <li><a href="#home" onClick={onGoToHome}>Beranda</a></li>
             <li><a href="#features">Fitur</a></li>
             <li><a href="#pricing">Harga</a></li>
           </ul>
