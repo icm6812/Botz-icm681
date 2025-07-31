@@ -170,10 +170,11 @@ const HomePage = ({ onGoToJoin }) => {
               </button>
             </div>
 
-            {/* Paket Full */}
-            <div className="pricing-card featured">
+            {/* Paket Full - Not Available */}
+            <div className="pricing-card unavailable">
               <div className="price">Rp 23.000</div>
               <div className="price-description">Full Paket</div>
+              <div className="unavailable-badge">Tidak Tersedia</div>
               <ul className="features">
                 <li><i className="fas fa-clock"></i> 70 hari aktif</li>
                 <li><i className="fas fa-check"></i> Semua fitur dari Rp12.000</li>
@@ -183,8 +184,8 @@ const HomePage = ({ onGoToJoin }) => {
                 <li><i className="fas fa-crown"></i> Fitur premium lengkap</li>
                 <li><i className="fas fa-rocket"></i> Performa maksimal</li>
               </ul>
-              <button onClick={onGoToJoin} className="btn">
-                <i className="fas fa-rocket"></i> Pilih Paket
+              <button className="btn disabled" disabled>
+                <i className="fas fa-ban"></i> Tidak Tersedia
               </button>
             </div>
 
