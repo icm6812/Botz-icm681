@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './JoinPage.css';
 import { mockFormSubmission } from '../services/mockApi';
 
-const JoinPage = () => {
+const JoinPage = ({ onGoToHome }) => {
   const [formData, setFormData] = useState({
     whatsapp_bot: '',
     whatsapp_owner: '',
