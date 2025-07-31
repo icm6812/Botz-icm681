@@ -18,10 +18,8 @@ const JoinPage = ({ onGoToHome }) => {
     { value: '', label: 'Pilih Paket' },
     { value: 'gratis', label: 'Free (7 hari trial)', price: 'Gratis' },
     { value: 'staf', label: 'Staf - Rp 3.000', price: 'Rp 3.000' },
-    { value: 'basic', label: 'Basic - Rp 5.000', price: 'Rp 5.000' },
-    { value: 'menengah', label: 'Menengah - Rp 8.000', price: 'Rp 8.000' },
-    { value: 'premium', label: 'Premium - Rp 12.000', price: 'Rp 12.000' },
-    { value: 'full', label: 'Full Paket - Rp 25.000', price: 'Rp 25.000' }
+    { value: 'basic', label: 'Basic - Rp 5.000 (POPULER)', price: 'Rp 5.000' },
+    { value: 'premium', label: 'Premium - Rp 12.000', price: 'Rp 12.000' }
   ];
 
   const handleInputChange = (e) => {
