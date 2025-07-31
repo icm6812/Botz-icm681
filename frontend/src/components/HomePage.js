@@ -122,7 +122,7 @@ const HomePage = ({ onGoToJoin }) => {
             </div>
 
             {/* Paket Basic */}
-            <div className="pricing-card">
+            <div className="pricing-card featured">
               <div className="price">Rp 5.000</div>
               <div className="price-description">Paket Basic</div>
               <ul className="features">
@@ -136,18 +136,19 @@ const HomePage = ({ onGoToJoin }) => {
               </button>
             </div>
 
-            {/* Paket Menengah */}
-            <div className="pricing-card featured">
+            {/* Paket Menengah - Not Available */}
+            <div className="pricing-card unavailable">
               <div className="price">Rp 8.000</div>
               <div className="price-description">Paket Menengah</div>
+              <div className="unavailable-badge">Tidak Tersedia</div>
               <ul className="features">
                 <li><i className="fas fa-clock"></i> 60 hari aktif</li>
                 <li><i className="fas fa-shield-alt"></i> Garansi 40 hari</li>
                 <li><i className="fas fa-star"></i> Perform menengah</li>
                 <li><i className="fas fa-wifi"></i> Syarat: internet dari user</li>
               </ul>
-              <button onClick={onGoToJoin} className="btn">
-                <i className="fas fa-crown"></i> Pilih Paket
+              <button className="btn disabled" disabled>
+                <i className="fas fa-ban"></i> Tidak Tersedia
               </button>
             </div>
 
