@@ -51,6 +51,9 @@ const HomePage = ({ onGoToJoin }) => {
       </section>
 
       {/* Features Section */}
+      <FeaturesSection />
+
+      {/* Features Section */}
       <section id="features" className="container">
         <div className="features-section">
           <div className="info-header">
