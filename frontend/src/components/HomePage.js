@@ -1,5 +1,6 @@
 import React from 'react';
 import './HomePage.css';
+import FeaturesSection from './FeaturesSection';
 
 const HomePage = ({ onGoToJoin }) => {
   const toggleMenu = () => {
