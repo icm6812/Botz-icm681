@@ -53,40 +53,6 @@ const HomePage = ({ onGoToJoin }) => {
       {/* Features Section */}
       <FeaturesSection />
 
-      {/* Features Section */}
-      <section id="features" className="container">
-        <div className="features-section">
-          <div className="info-header">
-            <i className="fas fa-star"></i>
-            <h2>Mengapa Memilih VzBotz Indonesia?</h2>
-          </div>
-          <p>Dapatkan layanan hosting bot WhatsApp terbaik dengan berbagai pilihan paket yang sesuai dengan kebutuhan Anda. Mulai dari paket gratis hingga enterprise.</p>
-
-          <div className="features-grid">
-            <div className="feature-card">
-              <i className="fas fa-clock"></i>
-              <h3>Deploy Cepat</h3>
-              <p>Bot Anda akan aktif dalam hitungan menit setelah setup</p>
-            </div>
-            <div className="feature-card">
-              <i className="fas fa-shield-alt"></i>
-              <h3>Keamanan Terjamin</h3>
-              <p>Data dan nomor WhatsApp Anda aman dengan enkripsi tingkat enterprise</p>
-            </div>
-            <div className="feature-card">
-              <i className="fas fa-headset"></i>
-              <h3>Support 24/7</h3>
-              <p>Tim support siap membantu Anda kapan saja melalui WhatsApp</p>
-            </div>
-            <div className="feature-card">
-              <i className="fas fa-chart-line"></i>
-              <h3>Performa Optimal</h3>
-              <p>Server berkualitas tinggi untuk memastikan bot selalu responsif</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
       <section id="pricing" className="pricing">
         <div className="container">
