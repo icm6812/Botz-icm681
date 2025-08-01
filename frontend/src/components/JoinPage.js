@@ -141,7 +141,11 @@ Dikirim dari website VZ Botz Indonesia
                 {showSuccess && (
                   <div className="success-message" id="successMessage">
                     <i className="fas fa-check-circle"></i>
-                    Pesan berhasil dikirim! Kami akan segera menghubungi Anda.
+                    ✅ Pendaftaran berhasil dikirim! Kami akan segera menghubungi Anda via WhatsApp dalam 1-24 jam.
+                    <br />
+                    <small style={{marginTop: '8px', display: 'block', opacity: '0.9'}}>
+                      📧 Email konfirmasi juga akan dikirim ke {formData.email}
+                    </small>
                   </div>
                 )}
                 
