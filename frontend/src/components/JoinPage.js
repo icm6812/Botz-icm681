@@ -239,12 +239,12 @@ Dikirim dari website VZ Botz Indonesia
                     {isSubmitting ? (
                       <>
                         <div className="loading-spinner"></div>
-                        Processing...
+                        Mengirim ke Email...
                       </>
                     ) : (
                       <>
                         <i className="fas fa-paper-plane"></i> 
-                        Kirim Pesan
+                        Daftar Sekarang
                       </>
                     )}
                   </button>
