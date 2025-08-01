@@ -1,0 +1,10 @@
+name = "botz-icm681"
+type = "javascript"
+
+account_id = "622d0a34c71976734d5386f63a2eb35f"
+workers_dev = true
+compatibility_date = "2025-07-31"
+
+[build]
+command = "npm install"
+upload.format = "modules"
