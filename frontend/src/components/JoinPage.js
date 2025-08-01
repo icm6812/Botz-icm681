@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './JoinPage.css';
-import { mockFormSubmission } from '../services/mockApi';
 
 const JoinPage = ({ onGoToHome }) => {
   const [formData, setFormData] = useState({
@@ -35,24 +34,53 @@ const JoinPage = ({ onGoToHome }) => {
     setIsSubmitting(true);
     
     try {
-      // Mock API call
-      await mockFormSubmission(formData);
-      setShowSuccess(true);
-      
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setShowSuccess(false);
-        setFormData({
-          whatsapp_bot: '',
-          whatsapp_owner: '',
-          email: '',
-          package: '',
-          message: ''
-        });
-      }, 3000);
+      // Web3Forms submission
+      const formDataToSend = new FormData();
+      formDataToSend.append('access_key', 'd7c0a514-d442-438c-becc-09effa6e101a');
+      formDataToSend.append('name', `VZ Botz - ${formData.whatsapp_bot}`);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('subject', `Pendaftaran Bot WhatsApp - Paket ${formData.package}`);
+      formDataToSend.append('message', `
+Pendaftaran Baru VZ Botz Indonesia:
+
+📱 Nomor WhatsApp Bot: ${formData.whatsapp_bot}
+👤 Nomor WhatsApp Owner: ${formData.whatsapp_owner}
+📧 Email: ${formData.email}
+📦 Paket Dipilih: ${formData.package}
+💬 Pesan Tambahan: ${formData.message || 'Tidak ada pesan tambahan'}
+
+Dikirim dari website VZ Botz Indonesia
+      `);
+      formDataToSend.append('from_name', 'VZ Botz Indonesia');
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formDataToSend
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setShowSuccess(true);
+        
+        // Reset form after 5 seconds
+        setTimeout(() => {
+          setShowSuccess(false);
+          setFormData({
+            whatsapp_bot: '',
+            whatsapp_owner: '',
+            email: '',
+            package: '',
+            message: ''
+          });
+        }, 5000);
+      } else {
+        throw new Error('Gagal mengirim form');
+      }
       
     } catch (error) {
       console.error('Form submission error:', error);
+      alert('Terjadi kesalahan saat mengirim form. Silakan coba lagi.');
     } finally {
       setIsSubmitting(false);
     }
